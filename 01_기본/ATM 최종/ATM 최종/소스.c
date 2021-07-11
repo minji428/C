@@ -4,23 +4,23 @@ int main(void)
 {
 	int db_id1 = 1111, db_id2 = 2222;
 	int db_m1 = 1000, db_m2 = 2000;
-	int log = -1;		//·Î±×¾Æ¿ô
+	int log = -1;		//ë¡œê·¸ì•„ì›ƒ
 	int run = 1;
 
 	while (run == 1) {
 		if (log == -1) {
-			printf("·Î±×ÀÎ ÇÏ¼¼¿ä "); printf("\n");
+			printf("ë¡œê·¸ì¸ í•˜ì„¸ìš” "); printf("\n");
 		}
 		else {
-			printf("[%d] ·Î±×ÀÎÁß", log); printf("\n");
+			printf("[%d] ë¡œê·¸ì¸ì¤‘", log); printf("\n");
 		}
 		printf("===== MEGA ATM ====="); printf("\n");
-		printf("1.·Î±×ÀÎ 2.Á¾·á"); printf("\n");
+		printf("1.ë¡œê·¸ì¸ 2.ì¢…ë£Œ"); printf("\n");
 
 		int sel;
 		scanf_s("%d", &sel);
 		if (sel == 1) {
-			printf("¾ÆÀÌµð¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+			printf("ì•„ì´ë””ë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ");
 			int id;
 			scanf_s("%d", &id);
 			if (id == db_id1) {
@@ -32,69 +32,69 @@ int main(void)
 		}
 		while (log != -1) {
 			printf("===== %d =====", log); printf("\n");
-			printf("3.ÀÜ¾×Á¶È¸ 4.Ãâ±Ý 5.ÀÔ±Ý 0.·Î±×¾Æ¿ô"); printf("\n");
+			printf("3.ìž”ì•¡ì¡°íšŒ 4.ì¶œê¸ˆ 5.ìž…ê¸ˆ 0.ë¡œê·¸ì•„ì›ƒ"); printf("\n");
 
 			int sel1;
 			scanf_s("%d", &sel1);
 			if (sel1 == 3) {
 				if (log == db_id1) {
-					printf("ÀÜ¾×Àº %d ¿ø ÀÔ´Ï´Ù", db_m1);
+					printf("ìž”ì•¡ì€ %d ì› ìž…ë‹ˆë‹¤", db_m1);
 				}
 				else if (log == db_id2) {
-					printf("ÀÜ¾×Àº %d ¿ø ÀÔ´Ï´Ù", db_m2); printf("\n");
+					printf("ìž”ì•¡ì€ %d ì› ìž…ë‹ˆë‹¤", db_m2); printf("\n");
 				
 				}
 			}
 
 			if (sel1 == 4) {
 				if (log == db_id1) {
-					printf("Ãâ±Ý ÇÒ ±Ý¾×À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+					printf("ì¶œê¸ˆ í•  ê¸ˆì•¡ì„ ìž…ë ¥í•˜ì„¸ìš”: ");
 					int money;
 					scanf_s("%d", &money);
 					if (money > db_m1) {
-						printf("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä: ");
+						printf("ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”: ");
 						scanf_s("%d", &money);
 					}
 					else if (money <= db_id1) {
 						db_m1 = db_m1 - money;
-						printf("ÀÜ¾×: %d", db_m1); printf("\n");
+						printf("ìž”ì•¡: %d", db_m1); printf("\n");
 					}
 				}
 				if (log == db_id2) {
-					printf("Ãâ±Ý ÇÒ ±Ý¾×À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+					printf("ì¶œê¸ˆ í•  ê¸ˆì•¡ì„ ìž…ë ¥í•˜ì„¸ìš”: ");
 					int money;
 					scanf_s("%d", &money);
 					if (money > db_m2) {
-						printf("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä: ");
+						printf("ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”: ");
 						scanf_s("%d", &money);
 					}
 					else if (money <= db_id2) {
 						db_m2 = db_m2 - money;
-						printf("ÀÜ¾×: %d", db_m2); printf("\n");
+						printf("ìž”ì•¡: %d", db_m2); printf("\n");
 					}
 				}
 			}
 			
 			if (sel1 == 5) {
 				if (log == db_id1) {
-					printf("ÀÔ±Ý ÇÒ ±Ý¾×À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+					printf("ìž…ê¸ˆ í•  ê¸ˆì•¡ì„ ìž…ë ¥í•˜ì„¸ìš”: ");
 					int money;
 					scanf_s("%d",&money);
 					db_m1 = db_m1 + money;
-					printf("ÀÜ¾×: %d", db_m1); printf("\n");
+					printf("ìž”ì•¡: %d", db_m1); printf("\n");
 				}
 				if (log == db_id2) {
-					printf("ÀÔ±Ý ÇÒ ±Ý¾×À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+					printf("ìž…ê¸ˆ í•  ê¸ˆì•¡ì„ ìž…ë ¥í•˜ì„¸ìš”: ");
 					int money;
 					scanf_s("%d", &money);
 					db_m2 = db_m2 + money;
-					printf("ÀÜ¾×: %d", db_m2); printf("\n");
+					printf("ìž”ì•¡: %d", db_m2); printf("\n");
 				}
 			}
 
 			if (sel1 == 0) {
 				log = -1;
-				printf("·Î±×¾Æ¿ô µÇ¾ú½À´Ï´Ù"); printf("\n");
+				printf("ë¡œê·¸ì•„ì›ƒ ë˜ì—ˆìŠµë‹ˆë‹¤"); printf("\n");
 			}
 		}
 	}
