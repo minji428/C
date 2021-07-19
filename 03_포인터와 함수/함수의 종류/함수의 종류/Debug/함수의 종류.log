@@ -1,0 +1,3 @@
+﻿  소스.cpp
+C:\Users\user\Desktop\박민지\포인터와 함수\함수의 종류\함수의 종류\소스.cpp(23,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  함수의 종류.vcxproj -> C:\Users\user\Desktop\박민지\포인터와 함수\함수의 종류\Debug\함수의 종류.exe
